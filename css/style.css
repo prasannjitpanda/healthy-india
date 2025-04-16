@@ -57,7 +57,7 @@ body {
   
   .bottom-links a {
     text-decoration: none;
-    color: #28a745;
+    color: #000000;
     font-weight: bold;
   }
 
@@ -101,7 +101,7 @@ body {
   }
   
   .article-preview h2 a {
-    color: #28a745;
+    color: #000000;
     text-decoration: none;
   }
   
