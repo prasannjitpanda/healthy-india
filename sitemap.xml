@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.fitindiahealth.in/</loc>
+    <lastmod>2025-04-17</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Fitness Section -->
+  <url>
+    <loc>https://www.fitindiahealth.in/fitness/index.html</loc>
+    <lastmod>2025-04-17</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.fitindiahealth.in/fitness/article1.html</loc>
+    <lastmod>2025-04-17</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.fitindiahealth.in/fitness/article2.html</loc>
+    <lastmod>2025-04-17</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.fitindiahealth.in/fitness/article3.html</loc>
+    <lastmod>2025-04-17</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Recipes Page -->
+  <url>
+    <loc>https://www.fitindiahealth.in/recipes.html</loc>
+    <lastmod>2025-04-17</lastmod>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Mind Page -->
+  <url>
+    <loc>https://www.fitindiahealth.in/mind.html</loc>
+    <lastmod>2025-04-17</lastmod>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://www.fitindiahealth.in/privacy.html</loc>
+    <lastmod>2025-04-17</lastmod>
+    <priority>0.30</priority>
+  </url>
+
+</urlset>
