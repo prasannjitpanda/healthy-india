@@ -1,31 +1,37 @@
 <?php
-$baseUrl = "https://www.fitindiahealth.in/"; // Apne site ka URL yahan daalein
-$pages = array(
-  "index.html",
-  "privacy.html",
-  "fitness/index.html",
-  "fitness/article1.html",
-  "fitness/article2.html",
-  "fitness/article3.html",
-  "fitness/article4.html",
-  "fitness/article5.html",
-  "recipes.html",
-  "mind.html"
-);
+$baseUrl = "https://www.fitindiahealth.in/"; // Apna domain URL yahan daal
 
-$xml = '<?xml version="1.0" encoding="UTF-8"?>';
-$xml .= "\n" . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+function getHtmlFiles($dir) {
+    $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir));
+    $files = [];
 
-foreach ($pages as $page) {
-    $xml .= "<url>\n";
-    $xml .= "<loc>" . $baseUrl . $page . "</loc>\n";
-    $xml .= "<changefreq>weekly</changefreq>\n";
-    $xml .= "<priority>0.8</priority>\n";
-    $xml .= "</url>\n";
+    foreach ($rii as $file) {
+        if (!$file->isDir() && pathinfo($file, PATHINFO_EXTENSION) === 'html') {
+            $filePath = str_replace("\\", "/", $file->getPathname());
+            $filePath = ltrim(str_replace(__DIR__, "", $filePath), "/");
+            $files[] = $filePath;
+        }
+    }
+
+    return $files;
 }
 
-$xml .= "</urlset>";
+$allHtmlPages = getHtmlFiles(__DIR__);
 
-file_put_contents("sitemap.xml", $xml);
-echo "Sitemap generated successfully!";
+$xml = new DOMDocument("1.0", "UTF-8");
+$urlset = $xml->createElement("urlset");
+$urlset->setAttribute("xmlns", "http://www.sitemaps.org/schemas/sitemap/0.9");
+
+foreach ($allHtmlPages as $page) {
+    $url = $xml->createElement("url");
+    $loc = $xml->createElement("loc", htmlspecialchars($baseUrl . $page));
+    $url->appendChild($loc);
+    $urlset->appendChild($url);
+}
+
+$xml->appendChild($urlset);
+$xml->formatOutput = true;
+$xml->save("sitemap.xml");
+
+echo "Sitemap generated automatically!";
 ?>
