@@ -4,14 +4,14 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.fitindiahealth.in/</loc>
-    <lastmod>2025-04-21</lastmod>
+    <lastmod>2025-04-24</lastmod>
     <priority>1.00</priority>
   </url>
 
   <!-- Index -->
   <url>
     <loc>https://www.fitindiahealth.in/index.html</loc>
-    <lastmod>2025-04-21</lastmod>
+    <lastmod>2025-04-24</lastmod>
     <priority>0.90</priority>
   </url>
 
@@ -67,7 +67,7 @@
   <!-- Mind Page -->
   <url>
     <loc>https://www.fitindiahealth.in/mind/index.html</loc>
-    <lastmod>2025-04-21</lastmod>
+    <lastmod>2025-04-24</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
@@ -76,8 +76,13 @@
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://www.fitindiahealth.in/mind/article2.html</loc>
-    <lastmod>2025-04-21</lastmod>
+    <loc>https://www.fitindiahealth.in/mind/mind2.html</loc>
+    <lastmod>2025-04-24</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.fitindiahealth.in/mind/mind3.html</loc>
+    <lastmod>2025-04-24</lastmod>
     <priority>0.65</priority>
   </url>
 
