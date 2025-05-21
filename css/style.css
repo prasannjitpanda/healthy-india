@@ -1,117 +1,145 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f8f9fa;
-    color: #333;
-  }
-  
-  header {
-    background: #28a745;
-    padding: 15px;
-    color: black;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  nav a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .hero {
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 40px;
-  }
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #eef2f3;
+  color: #333;
+  perspective: 1000px;
+  overflow-x: hidden;
+}
 
-  .bottom-links {
-    background: #f1f1f1;
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .bottom-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .bottom-links a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-  }
+header {
+  background: linear-gradient(to right, #28a745, #218838);
+  padding: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateZ(10px);
+}
 
-  .articles-list {
-    padding: 30px;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  .article-preview {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-  }
-  
-  .article-preview h2 {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-  
-  .article-preview a {
-    text-decoration: none;
-    color: #0088cc;
-  }
-  
-  .article-preview a:hover {
-    text-decoration: underline;
-  }
-  
-  .article-preview p {
-    color: #333;
-  }
-  
-  .article-preview {
-    background: #fff;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    max-width: 700px;
-  }
-  
-  .article-preview h2 a {
-    color: #000000;
-    text-decoration: none;
-  }
-  
-  .article-preview a {
-    color: #007bff;
-    text-decoration: underline;
-  }
-  
-  /* -------------------
-   MOBILE RESPONSIVE STYLES
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  transform-style: preserve-3d;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+nav a:hover {
+  transform: scale(1.1) translateZ(5px);
+  color: #ffeb3b;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 20px;
+  margin: 30px auto;
+  max-width: 900px;
+  transform: rotateX(1deg);
+}
+
+.article-preview {
+  background: #ffffff;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-width: 700px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+.article-preview:hover {
+  transform: translateY(-10px) rotateY(2deg);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.article-preview h2 a {
+  color: #000;
+  text-decoration: none;
+}
+.article-preview a {
+  color: #007bff;
+  text-decoration: underline;
+}
+.article-preview p {
+  color: #444;
+}
+
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.4);
+}
+
+.bottom-links {
+  background: #f1f1f1;
+  padding: 15px;
+  text-align: center;
+}
+.bottom-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.bottom-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+.bottom-links a:hover {
+  transform: translateZ(5px) scale(1.1);
+  color: #28a745;
+}
+
+.share-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+.share-buttons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.share-buttons a:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.share-buttons .whatsapp { background: #25D366; }
+.share-buttons .facebook { background: #3b5998; }
+.share-buttons .twitter { background: #1DA1F2; }
+.share-buttons .pinterest { background: #BD081C; }
+.share-buttons .instagram { background: #E1306C; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* -------------------
+   MOBILE RESPONSIVE
 -------------------- */
 @media (max-width: 768px) {
   nav ul {
@@ -121,15 +149,7 @@ body {
   }
 
   .hero {
-    padding: 30px 15px;
-  }
-
-  .hero img {
-    max-height: 250px;
-  }
-
-  body {
-    font-size: 16px;
+    padding: 40px 15px;
   }
 
   .article-preview {
@@ -159,36 +179,35 @@ body {
     font-size: 16px;
   }
 }
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) rotateX(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
 }
 
-header {
-  text-align: center;
-  padding: 10px;
-  background-color: #f2f2f2;
+.hero,
+.article-preview {
+  animation: fadeSlideIn 0.8s ease-out both;
+}
+.button3d {
+  padding: 10px 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #1e7e34;
+  transform: perspective(500px) translateZ(0);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.share-buttons {
-  text-align: center;
-  margin-top: 20px;
+.button3d:active {
+  transform: translateY(4px) scale(0.98);
+  box-shadow: 0 2px 0 #1e7e34;
 }
-
-.share-buttons a {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 24px;
-  color: #fff;
-  padding: 10px;
-  border-radius: 50%;
-  text-decoration: none;
-}
-
-.share-buttons .whatsapp { background: #25D366; }
-.share-buttons .facebook { background: #3b5998; }
-.share-buttons .twitter { background: #1DA1F2; }
-.share-buttons .pinterest { background: #BD081C; }
-.share-buttons .instagram { background: #E1306C; }
